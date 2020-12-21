@@ -20,6 +20,7 @@ namespace POO_Produtos.Classes
         List<Produto> ListaDeProduto = new List<Produto>();
         
         public void Cadastrar(int ops){
+            int cont = 0;
 
             Console.WriteLine($"Quantos produtos deseja adicionar?");
             ops = int.Parse(Console.ReadLine());
@@ -28,7 +29,6 @@ namespace POO_Produtos.Classes
                 Console.WriteLine($"Número inválido.\nQuantos produtos deseja adicionar?");
                 ops = int.Parse(Console.ReadLine());
             }
-            int cont = 0;
             do
             {
                 Produto novoProduto = new Produto();
