@@ -1,0 +1,13 @@
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\bin\Debug\netcoreapp3.1\POO_Produtos.exe
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\bin\Debug\netcoreapp3.1\POO_Produtos.deps.json
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\bin\Debug\netcoreapp3.1\POO_Produtos.runtimeconfig.json
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\bin\Debug\netcoreapp3.1\POO_Produtos.runtimeconfig.dev.json
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\bin\Debug\netcoreapp3.1\POO_Produtos.dll
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\bin\Debug\netcoreapp3.1\POO_Produtos.pdb
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\obj\Debug\netcoreapp3.1\POO_Produtos.csprojAssemblyReference.cache
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\obj\Debug\netcoreapp3.1\POO_Produtos.AssemblyInfoInputs.cache
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\obj\Debug\netcoreapp3.1\POO_Produtos.AssemblyInfo.cs
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\obj\Debug\netcoreapp3.1\POO_Produtos.csproj.CoreCompileInputs.cache
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\obj\Debug\netcoreapp3.1\POO_Produtos.dll
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\obj\Debug\netcoreapp3.1\POO_Produtos.pdb
+C:\Users\leand\OneDrive\Área de Trabalho\POO_Produtos\obj\Debug\netcoreapp3.1\POO_Produtos.genruntimeconfig.cache
