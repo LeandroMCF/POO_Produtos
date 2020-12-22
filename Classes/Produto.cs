@@ -63,12 +63,20 @@ namespace POO_Produtos.Classes
             }
             Console.ResetColor();
         }
-        public void Deletar(int cod){
-            Produto produtoDelet = ListaDeProduto.Find(p => p.Codigo == cod);
-            ListaDeProduto.Remove(produtoDelet);
+        public void Deletar(int cod, bool resposta){
+            if (resposta == true)
+            {
+                Produto produtoDelet = ListaDeProduto.Find(p => p.Codigo == cod);
+                ListaDeProduto.Remove(produtoDelet);
+            }
+            else
+            {
+                Console.WriteLine($"Ok!");
+                
+            }
         }
 
-        public void MostrarProduto(int cod, string ops){
+        public bool MostrarProduto(int cod, string ops){
             Produto escolhaProduto = new Produto();
             foreach (var item in ListaDeProduto)
             {
@@ -83,16 +91,15 @@ namespace POO_Produtos.Classes
                         ops = Console.ReadLine();
                         ops = ops.ToUpper();
                     }
-                    if (ops == "S")
-                    {
-                        Produto deletarProduto = ListaDeProduto.Find(x => x.Codigo == cod);
-                        ListaDeProduto.Remove(deletarProduto);
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Ok!");
-                    }
                 }
+            }
+            if (ops == "S")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
             
         }

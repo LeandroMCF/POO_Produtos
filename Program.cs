@@ -55,7 +55,8 @@ namespace POO_Produtos
                         {
                             Console.Write($"Digite o código do produto que deseja excluir: ");
                             cod = int.Parse(Console.ReadLine());
-                            produto.MostrarProduto(cod, ops2);
+                            bool resposta = produto.MostrarProduto(cod, ops2);
+                            produto.Deletar(cod, resposta);
                         }
                     break;
 
