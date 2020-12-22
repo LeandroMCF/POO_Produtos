@@ -21,6 +21,7 @@ namespace POO_Produtos.Classes
 
             Console.Write("Digite o nome da marca: ");
             novaMarca.NomeMarca = Console.ReadLine();
+            Console.WriteLine($"");
 
             novaMarca.DataCadastro = DateTime.UtcNow;
             

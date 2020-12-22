@@ -61,6 +61,7 @@ namespace POO_Produtos.Classes
                 Console.WriteLine($"Marca: {item.Marca.NomeMarca}");
                 Console.WriteLine($"");
             }
+            Console.ResetColor();
         }
         public void Deletar(int cod){
             Produto produtoDelet = ListaDeProduto.Find(p => p.Codigo == cod);
