@@ -13,14 +13,13 @@ namespace POO_Produtos.Classes
     
         DateTime DataCadastro { get; set; }
     
-        Marca Marca { get; set; }
+        public Marca Marca = new Marca();
     
         Usuario CadastrarPor { get; set; }
     
         List<Produto> ListaDeProduto = new List<Produto>();
         
         public void Cadastrar(int ops){
-            int cont = 0;
 
             Console.WriteLine($"Quantos produtos deseja adicionar?");
             ops = int.Parse(Console.ReadLine());
@@ -29,6 +28,7 @@ namespace POO_Produtos.Classes
                 Console.WriteLine($"Número inválido.\nQuantos produtos deseja adicionar?");
                 ops = int.Parse(Console.ReadLine());
             }
+            int cont = 0;
             do
             {
                 Produto novoProduto = new Produto();
@@ -41,11 +41,12 @@ namespace POO_Produtos.Classes
                 Console.Write($"Digite o preço do produto: ");
                 novoProduto.Preco = float.Parse(Console.ReadLine());
                 
-                Marca = Marca.CadastrarMarca();
+                novoProduto.Marca = Marca.CadastrarMarca();
 
                 CadastrarPor = new Usuario();
 
                 ListaDeProduto.Add(novoProduto);
+                cont++;
             } while (cont < ops);
 
         }
@@ -74,14 +75,17 @@ namespace POO_Produtos.Classes
                 {
                     Console.WriteLine($"Tem certeza que deseja excluir esse produto [S] Sim ou [N] Não: \nNome: {item.NomeProduto}\nPreço: {item.Preco}");
                     ops = Console.ReadLine();
+                    ops = ops.ToUpper();
                     while (ops != "S" && ops != "N")
                     {
                         Console.WriteLine($"Opção inválida.\nTem certeza que deseja excluir esse produto [S] Sim ou [N] Não");
                         ops = Console.ReadLine();
+                        ops = ops.ToUpper();
                     }
                     if (ops == "S")
                     {
-                        escolhaProduto.Deletar(cod);
+                        Produto deletarProduto = ListaDeProduto.Find(x => x.Codigo == cod);
+                        ListaDeProduto.Remove(deletarProduto);
                     }
                     else
                     {
