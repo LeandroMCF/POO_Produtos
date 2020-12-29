@@ -40,8 +40,8 @@ namespace POO_Produtos.Classes
 
                 Console.Write($"Digite o preço do produto: ");
                 novoProduto.Preco = float.Parse(Console.ReadLine());
+                Console.WriteLine($"");
                 
-                novoProduto.Marca = Marca.CadastrarMarca();
 
                 CadastrarPor = new Usuario();
 
@@ -58,7 +58,6 @@ namespace POO_Produtos.Classes
                 Console.WriteLine($"Produto: {item.NomeProduto}");
                 Console.WriteLine($"Preço: {item.Preco}");
                 Console.WriteLine($"Data de cadatro: {item.DataCadastro}");
-                Console.WriteLine($"Marca: {item.Marca.NomeMarca}");
                 Console.WriteLine($"");
             }
             Console.ResetColor();

@@ -12,22 +12,34 @@ namespace POO_Produtos.Classes
 
         List<Marca> Marcas = new List<Marca>();
 
-        public Marca CadastrarMarca(){
+        public Marca CadastrarMarca(int ops){
 
             Marca novaMarca = new Marca();
+            Console.WriteLine($"Quantas marcas você deseja adicionar?");
+            ops = int.Parse(Console.ReadLine());
+            while (ops <= 0)
+            {
+                Console.WriteLine($"Opção inválida.\nQuantas marcas você deseja adicionar?");
+                ops = int.Parse(Console.ReadLine());
+            }
+            int cont = 0;
+            do
+            {
+                Console.Write($"Digite o cod da marca: ");
+                novaMarca.Codigo = int.Parse(Console.ReadLine());
 
-            Console.Write($"Digite o cod da marca: ");
-            novaMarca.Codigo = int.Parse(Console.ReadLine());
+                Console.Write("Digite o nome da marca: ");
+                novaMarca.NomeMarca = Console.ReadLine();
+                Console.WriteLine($"");
 
-            Console.Write("Digite o nome da marca: ");
-            novaMarca.NomeMarca = Console.ReadLine();
-            Console.WriteLine($"");
+                novaMarca.DataCadastro = DateTime.UtcNow;
+                
+                Marcas.Add(novaMarca);
+                cont++;
 
-            novaMarca.DataCadastro = DateTime.UtcNow;
-            
-            Marcas.Add(novaMarca);
-
-            return novaMarca;
+                return novaMarca;
+                
+            } while (cont < ops);
         }
         public void Listar(){
 
